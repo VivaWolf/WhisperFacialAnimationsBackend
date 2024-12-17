@@ -43,7 +43,7 @@ while True:
 						s = re.sub('[^ðθʌæʧʃʒʤlfbmpnŋdtjrwhszgɡkəeaɑɒʊɛɔɪi]', '', s)
 						offset = (end - beg) / (len(s))
 						for x in range(len(s)):
-							ToWritePhonemes += s[x] + ":" + str(beg + (x * offset)) + ","
+							ToWritePhonemes += "{\"" + s[x] + "\":" + str(beg + (x * offset)) + "},"
 							
 			#Print out the results for easy debug viewing
 			print(ToWriteAudio)
@@ -51,7 +51,7 @@ while True:
 			
 			#Save the results
 			f = open("Results\\" + d, "w",  encoding='utf-8')
-			f.write("{\"AudioPath\":\"" + ToWriteAudio + "\",\"Phonemes\":\"" + ToWritePhonemes + "\"}")
+			f.write("{\"AudioPath\":\"" + ToWriteAudio + "\",\"Phonemes\":[" + ToWritePhonemes[:-1] + "]}")
 			f.close()
 			
 			#Relocate the request to the processed folder
