@@ -1,0 +1,4 @@
+# ignores user files
+/Requests/*
+/Processed/*
+/Results/*

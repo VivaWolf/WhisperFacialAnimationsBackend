@@ -3,3 +3,10 @@ This is the backend to several plugins and applications I've built that allow fo
 
 # Requirements
 Whisper-timestamped
+pip install whisper-timestamped
+
+Eng-To-Ipa
+pip install eng-to-ipa
+
+# Example Request
+{"PathToAudio":"F:\\Downloads\\Iso-SeductivelyYourelookingcuteCuteasfuck.wav"}
